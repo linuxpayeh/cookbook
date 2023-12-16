@@ -1,6 +1,6 @@
 [source]
-tar = "https://github.com/glennrp/libpng/archive/v1.6.39.tar.gz"
-blake3 = "02513cc5d15ac79c4c402f2ae623425f4f80bdbbf15ebc95430fb8ccfc987996"
+git = "https://github.com/glennrp/libpng"
+rev = "f135775ad4e5d4408d2e12ffcc71bb36e6b48551"
 script = """
 chmod +w config.sub
 wget -O config.sub "https://gitlab.redox-os.org/redox-os/gnu-config/-/raw/master/config.sub?inline=false"

@@ -1,7 +1,6 @@
 [source]
-tar="https://github.com/intel/intel-one-mono/archive/refs/tags/V1.3.0.tar.gz"
-blake3="9caff71b0a9fe8627253c55889964612ea4ae144584a283cd2fe88b7a14a4140"
-
+git = "https://github.com/intel/intel-one-mono"
+rev = "08d42d257a3211cf2427b35bc2eeab4622d042c8"
 [build]
 template = "custom"
 script = """

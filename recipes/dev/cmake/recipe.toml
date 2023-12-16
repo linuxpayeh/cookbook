@@ -1,6 +1,6 @@
 [source]
-tar = "https://github.com/Kitware/CMake/releases/download/v3.25.2/cmake-3.25.2.tar.gz"
-
+git = "https://gitlab.kitware.com/cmake/cmake"
+rev = "1eed682d7cca9bb2c2b0709a6c3202a3b08613b2"
 [build]
 template = "custom"
 dependencies = [

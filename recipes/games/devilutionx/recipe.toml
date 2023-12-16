@@ -1,7 +1,6 @@
 [source]
-tar = "https://github.com/diasurgical/devilutionX/archive/refs/tags/1.5.1.tar.gz"
-blake3 = "8425152bf50a692573d17ba85a8445734a564a372eba2190223bf0aa04f31d86"
-
+tar = "https://github.com/diasurgical/devilutionX/releases/download/1.5.1/devilutionx-src.tar.xz"
+blake3 = "6a78c4adb98100c2fac73f1c1c9a7dcab531d2fe911b50eb2c9079c67d94ada0"
 [build]
 template = "custom"
 dependencies = [

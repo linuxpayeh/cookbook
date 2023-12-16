@@ -1,6 +1,6 @@
 [source]
-git = "https://github.com/Byron/gitoxide.git"
-
+git = "https://github.com/Byron/gitoxide"
+rev = "a96956b0978c3618e7d3f2da049696f55a3b3c82"
 [build]
 dependencies = [
     "openssl1",
