@@ -1,0 +1,17 @@
+[source]
+git = "https://gitlab.redox-os.org/redox-os/rust-cairo"
+[build]
+template = "custom"
+dependencies = [
+    "cairo",
+    "expat",
+    "fontconfig",
+    "freetype2",
+    "libpng",
+    "pixman",
+    "zlib",
+]
+script = """
+cookbook_cargo_examples gui
+mv "${COOKBOOK_STAGE}/bin/gui" "${COOKBOOK_STAGE}/bin/rust-cairo"
+"""

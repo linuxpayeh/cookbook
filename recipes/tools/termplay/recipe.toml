@@ -1,0 +1,7 @@
+[source]
+git = "https://github.com/jD91mZM2/termplay"
+[build]
+template = "custom"
+script = """
+cookbook_cargo --no-default-features --features bin,termion
+"""

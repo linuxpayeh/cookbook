@@ -1,0 +1,11 @@
+[source]
+git = "https://gitlab.redox-os.org/redox-os/sodium"
+[build]
+template = "custom"
+script = """
+mkdir -pv "${COOKBOOK_STAGE}"/ui/apps
+mkdir -pv "${COOKBOOK_STAGE}"/ui/icons
+cp -rv "${COOKBOOK_SOURCE}"/manifest "${COOKBOOK_STAGE}"/ui/apps/sodium
+cp -rv "${COOKBOOK_SOURCE}"/icon.png "${COOKBOOK_STAGE}"/ui/icons/sodium.png
+cookbook_cargo --features orbital
+"""

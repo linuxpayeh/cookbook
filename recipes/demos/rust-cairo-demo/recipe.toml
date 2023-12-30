@@ -1,0 +1,13 @@
+[source]
+git = "https://gitlab.redox-os.org/redox-os/rust-cairo-demo"
+[build]
+template = "cargo"
+dependencies = [
+    "cairo",
+    "expat",
+    "fontconfig",
+    "freetype2",
+    "libpng",
+    "pixman",
+    "zlib",
+]

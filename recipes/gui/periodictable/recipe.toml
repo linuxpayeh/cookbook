@@ -1,0 +1,14 @@
+[source]
+git = "https://gitlab.redox-os.org/redox-os/periodictable"
+[build]
+template = "custom"
+dependencies = [
+    "orbital",
+]
+script = """
+mkdir -pv "${COOKBOOK_STAGE}"/ui/apps
+mkdir -pv "${COOKBOOK_STAGE}"/ui/icons
+cp -rv "${COOKBOOK_SOURCE}"/pkg/manifest "${COOKBOOK_STAGE}"/ui/apps/periodictable
+cp -rv "${COOKBOOK_SOURCE}"/pkg/icon.png "${COOKBOOK_STAGE}"/ui/icons/periodictable.png
+cookbook_cargo
+"""
