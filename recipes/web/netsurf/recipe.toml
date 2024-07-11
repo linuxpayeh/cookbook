@@ -26,6 +26,7 @@ script = """
     # nghttp2 is not linked for some reason
     export LDFLAGS="${LDFLAGS} -lcurl -lnghttp2"
     "$REDOX_MAKE" PREFIX=/usr V=1 -j"$($NPROC)"
+    "$REDOX_MAKE" clean
     "$REDOX_MAKE" ${COOKBOOK_STAGE}="${COOKBOOK_STAGE}" PREFIX=/usr install
 mkdir -pv "${COOKBOOK_STAGE}/ui/apps"
 cp -v "${COOKBOOK_RECIPE}/manifest" "${COOKBOOK_STAGE}/ui/apps/00_netsurf"
