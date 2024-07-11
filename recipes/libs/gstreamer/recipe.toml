@@ -60,5 +60,6 @@ meson . _build \
     -Dexamples=disabled \
     -Dtests=disabled
 ninja -C _build -v
-ninja -C _build -v install
+DESTDIR="${COOKBOOK_STAGE}" ninja -C _build -v install
+rm -f "${COOKBOOK_STAGE}/lib/"*.la
 """
