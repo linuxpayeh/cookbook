@@ -60,6 +60,6 @@ meson . _build \
     -Dgir=false \
     -Dx11=false
 ninja -C _build -v
-ninja -C _build -v install
+DESTDIR="${COOKBOOK_STAGE}" ninja -C _build -v install
 rm -f "${COOKBOOK_STAGE}/lib/"*.la
 """
