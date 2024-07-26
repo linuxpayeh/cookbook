@@ -27,4 +27,7 @@ COOKBOOK_CONFIGURE_FLAGS+=(
     ac_cv_lib_SDL_mixer_Mix_OpenAudio=yes
 )
 cookbook_configure
+mkdir -pv "${COOKBOOK_STAGE}"/usr/bin
+echo "#!/usr/bin/env sh \n /usr/games/prboom/prboom" > "${COOKBOOK_STAGE}"/usr/bin/prboom
+chmod a+x "${COOKBOOK_STAGE}"/usr/bin/prboom
 """
