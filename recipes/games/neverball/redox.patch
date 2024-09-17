@@ -46,7 +46,15 @@ diff -ruwN neverball-1.6.0/Makefile source/Makefile
  
  ifeq ($(PLATFORM),mingw)
  	ifneq ($(ENABLE_NLS),0)
-@@ -175,8 +175,8 @@
+@@ -168,15 +168,15 @@
+ 	OGL_LIBS  := -framework OpenGL
+ endif
+ 
+-BASE_LIBS := -ljpeg $(PNG_LIBS) $(FS_LIBS) -lm
++BASE_LIBS := -ljpeg $(PNG_LIBS) $(FS_LIBS) -lm $(shell $(PKG_CONFIG) --libs zlib)
+ 
+ ifeq ($(PLATFORM),darwin)
+ 	BASE_LIBS += $(patsubst %, -L%, $(wildcard /opt/local/lib \
  	                                           /usr/local/lib))
  endif
  
